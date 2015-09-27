@@ -20,21 +20,32 @@ $('body').append(toggleLink);
      
     
 var INF; 
-
+var tmppath;
 function i(a,b){
 var reasoning = $('#inference:checked').val();
-
+var abc;
 if(reasoning == "true")
 	{INF = a;}
 else {INF = b;}
 }
 
-// ############
-//    STEP 14
-// ############
+$('#i_file').change( function(event) {
+tmppath = URL.createObjectURL(event.target.files[0]);
+    
+
+  $("#disp_tmp_path").html(tmppath);
+  
+});
+
+
+$('#i_submit').click(function(){
+
+	window.location=tmppath;
 
 
 
+
+});
 
 
 $('#link14').on('click', function(e){
