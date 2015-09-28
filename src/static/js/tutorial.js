@@ -31,7 +31,9 @@ else {INF = b;}
 
 $('#i_file').change( function(event) {
 tmppath = URL.createObjectURL(event.target.files[0]);
-    
+var fr = document.getElementById("frame"); 
+
+ 	fr.src = tmppath;
 
   $("#disp_tmp_path").html(tmppath);
   
@@ -40,7 +42,7 @@ tmppath = URL.createObjectURL(event.target.files[0]);
 
 $('#i_submit').click(function(){
 
-	window.location=tmppath;
+	window.parent.location=tmppath;
 
 
 
